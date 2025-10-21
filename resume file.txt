@@ -1,0 +1,77 @@
+Hyderabad, India 500089
++918519949342
+mohammedaamaaan786@gmail.c
+om
+Bold Profile
+MOHAMMED AMAAN
+Computer Science Engineering graduate with a strong foundation in industrial
+automation, networking, and programming. Completed professional training in PLC,
+SCADA, HMI, and VFB Drives, along with practical exposure to automation processes,
+industrial control circuits, and system monitoring. I have completed an internship in
+digital marketing, where I learned about SEO, SEM, and keyword research, gaining
+analytical experience in a different domain. With a deep interest in both networking
+and automation, my goal is to combine these fields to develop reliable, connected,
+and technology-driven industrial solutions.
+SUMMARY
+SKILLS • PLC programming
+• SCADA systems
+• Python
+• Electrical Control Circuits
+• DOL
+• RDOL
+• Sequential Motor Starting
+• Tank Level Control
+• Siemens
+• Schneider
+• Allen Bradley
+• WinCC
+• HMI
+• Network Configuration
+• SEO
+• SEM
+• Keyword Research
+• Basic UI/UX Design
+PLC/SCADA & INDUSTRIAL AUTOMATION TRAINING, 07/2025 - 09/2025
+Trainee, Hyderabad
+DIGITAL MARKETING INTERN, 07/2024 - 12/2024
+TECHNICAL EXPERIENCE
+Hands-on training in PLC (Siemens, Schneider, Allen Bradley) programming for
+industrial automation.
+•
+Designed and tested control circuits: DOL, RDOL, Star-Delta Starter, Sequential
+Motor Starting, Tank Level Control.
+•
+Worked with SCADA (WinCC) and HMI (Siemens, Schneider) for real-time system
+monitoring and control.
+•
+Configured and operated AC Drives (Siemens, Schneider, ABB) for motor control
+applications
+•
+Medintu
+Completed a comprehensive internship Program in Digital Marketing, acquiring
+experience in Search Engine Optimization (SEO), Content Writing, and Web Design
+•
+Non-linear Quadcopter Simulation and Controller Design
+Team Project, Collaborated with a team to model quadcopter dynamics as a
+nonlinear system using MATLAB / Simulink., Contributed to the design and testing of
+controller algorithms (PID, LQR) for stable flight and maneuvering., Analyzed
+simulation results to evaluate system response under different flight conditions.
+PROJECT 1
+Student management system
+Python + SQL, Built a simple system to store and manage student records (name, roll,
+marks)., Used Python for the interface and SQL for database management.
+PROJECT 2
+ICFAI Foundation For Higher Education, Shankarpally, 10/2025
+Btech: CSE
+Expected Graduate: 2025
+Sri Chaitanya, Hyderabad, 05/2020
+Intermediate Education
+St Mark's Boys Town High School, Jahanuma, 04/2018
+School
+EDUCATION
+CERTIFICATION • Automation Courses: PLC, SCADA, HMI, AC Drives (Siemens, Schneider, ABB)
+• Certificate in Digital Marketing - Medintu (Internship)
+• Certificate in Digital Marketing - Lemonoids (Internship)
+• Certificate in CISCO Introduction to Cybersecurity - Cisco
+• Certificate in Basic UI/UX - Great Learning
+• Certificate in Introduction to AI in Python - Coursera

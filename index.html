@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohammed Amaan | Portfolio</title>
+  <meta name="description" content="Portfolio of Mohammed Amaan — CSE graduate with skills in Industrial Automation, PLC/SCADA, Python, SEO, and UI/UX." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background Canvas (animated) -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <!-- Parallax layers (subtle drift) -->
+  <div id="parallax-1" class="parallax-layer" aria-hidden="true"></div>
+  <div id="parallax-2" class="parallax-layer" aria-hidden="true"></div>
+  <!-- Header / Navbar -->
+  <header class="header" id="top">
+    <div class="container nav">
+      <a href="#home" class="logo">MA</a>
+      <nav id="nav" class="nav-links" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+  <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+  <button id="themeToggle" class="btn outline tech" type="button" title="Toggle theme"><span class="label">Valorant Theme</span><span class="glitch"></span><span class="spark-layer"></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero / Home -->
+  <section id="home" class="section hero">
+    <div class="container hero-grid">
+      <div class="hero-text center">
+        <p class="eyebrow">HELLO,</p>
+  <h1>I'm Mohammed Amaan</h1>
+  <div class="hero-divider" aria-hidden="true"></div>
+        <p class="role">Computer Science Engineering Graduate</p>
+        <p class="tagline">Bridging Industrial Automation and Data-driven Solutions — PLC/SCADA, Python, and Digital Strategy.</p>
+        <div class="cta-group">
+          <a class="btn primary tech" href="#projects">View Projects<span class="glitch"></span><span class="spark-layer"></span></a>
+          <a class="btn outline tech" href="assets/resume.pdf" download>Download Resume<span class="glitch"></span><span class="spark-layer"></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stylized Quote Banner -->
+  <section class="quote-banner" aria-label="Motto">
+    <div class="container">
+      <p class="quote-text">Discipline tempers craft; data sharpens decisions.</p>
+      <p class="quote-sub">Engineering the bridge between Automation and Intelligence.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section reveal">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Computer Science Engineering graduate with a strong foundation in industrial automation
+        and programming. Trained in PLC, SCADA, HMI, and VFD/AC Drives with hands-on
+        exposure to automation processes, industrial control circuits, and system monitoring.
+        Completed a digital marketing internship focusing on SEO, SEM, keyword research, content writing,
+        and web design. Passionate about combining data and automation to build reliable,
+        connected, and technology-driven industrial solutions.
+      </p>
+    </div>
+  </section>
+
+  <section id="education" class="section alt reveal">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="edu-branches">
+        <span class="spine" aria-hidden="true"></span>
+  <article class="edu-node left card reveal-left">
+          <div class="edu-meta"><span class="chip">July 2025</span></div>
+          <div class="edu-body">
+            <h3>
+              <svg class="edu-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2zm-1 13.09L3.97 11 1 12.36 11 17l1-.45V15.1z"/></svg>
+              B.Tech, CSE
+            </h3>
+            <p>ICFAI Foundation For Higher Education, Shankarpally</p>
+          </div>
+        </article>
+  <article class="edu-node right card reveal-right">
+          <div class="edu-meta"><span class="chip">May 2020</span></div>
+          <div class="edu-body">
+            <h3>
+              <svg class="edu-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4 6h16v2H4V6zm0 4h16v10H4V10zm4 2v6h2v-6H8zm4 0v6h2v-6h-2z"/></svg>
+              Intermediate
+            </h3>
+            <p>Sri Chaitanya, Hyderabad</p>
+          </div>
+        </article>
+  <article class="edu-node left card reveal-left">
+          <div class="edu-meta"><span class="chip">April 2018</span></div>
+          <div class="edu-body">
+            <h3>
+              <svg class="edu-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3l7 6v12h-5v-7H10v7H5V9l7-6z"/></svg>
+              School
+            </h3>
+            <p>St Mark's Boys Town High School, Jahanuma</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section alt reveal">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+  <div class="skill-card reveal">
+          <h3>Industrial Automation</h3>
+          <ul>
+            <li><span class="sigil"><strong>PLC</strong> programming (Siemens, Schneider, Allen Bradley)</span></li>
+            <li><span class="sigil"><strong>SCADA</strong> systems (WinCC)</span></li>
+            <li><span class="sigil"><strong>HMI</strong> (Siemens, Schneider)</span></li>
+            <li><span class="sigil"><strong>AC Drives/VFD</strong> (Siemens, Schneider, ABB)</span></li>
+            <li><span class="sigil"><strong>Electrical Control Circuits</strong>: DOL, RDOL, Star-Delta, Sequential Motor Starting, Tank Level Control</span></li>
+          </ul>
+        </div>
+  <div class="skill-card reveal">
+          <h3>Software & Programming</h3>
+          <ul>
+            <li><span class="sigil">Python</span></li>
+            <li><span class="sigil">MATLAB/Simulink (simulation and control)</span></li>
+            <li><span class="sigil">Basic UI/UX Design</span></li>
+            <li><span class="sigil">Adobe Photoshop</span></li>
+            <li><span class="sigil">Adobe Illustrator</span></li>
+            <li><span class="sigil">Adobe Premiere Pro</span></li>
+          </ul>
+        </div>
+  <div class="skill-card reveal">
+          <h3>Digital Marketing</h3>
+          <ul>
+            <li><span class="sigil">SEO, SEM</span></li>
+            <li><span class="sigil">Keyword Research</span></li>
+            <li><span class="sigil">Content Writing Basics</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section reveal">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="timeline">
+  <article class="tl-item reveal">
+          <h3>Digital Marketing Intern — Medintu (07/2024 – 12/2024)</h3>
+          <p>Completed a comprehensive internship covering SEO, content writing, web design, and keyword research. Gained analytical experience optimizing content and understanding search performance.</p>
+        </article>
+  <article class="tl-item reveal">
+          <h3>PLC/SCADA & Industrial Automation Training — Trainee (07/2025 – 09/2025)</h3>
+          <ul>
+            <li>Hands-on PLC programming (Siemens, Schneider, Allen Bradley).</li>
+            <li>Designed & tested control circuits: DOL, RDOL, Star-Delta Starter, Sequential Motor Starting, Tank Level Control.</li>
+            <li>Worked with SCADA (WinCC) and HMI for real-time monitoring and control.</li>
+            <li>Configured and operated AC Drives for motor control applications.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section alt reveal">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="timeline">
+  <article class="tl-item reveal">
+          <h3>Non-linear Quadcopter Simulation and Controller Design</h3>
+          <p>Team project modeling quadcopter dynamics as a nonlinear system using MATLAB/Simulink. Contributed to controller design and testing (PID, LQR) and analyzed system response under varied flight conditions.</p>
+        </article>
+  <article class="tl-item reveal">
+          <h3>Student Management System — Python + SQL</h3>
+          <p>Built a simple system to store and manage student records (name, roll, marks) using Python for the interface and SQL for database management.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certs" class="section alt reveal">
+    <div class="container">
+      <h2>Certifications & Training</h2>
+  <ul class="cert-list reveal">
+        <li><span class="sigil">Automation Courses: PLC, SCADA, HMI, AC Drives (Siemens, Schneider, ABB)</span></li>
+        <li><span class="sigil">Certificate in Digital Marketing — Medintu (Internship)</span></li>
+        <li><span class="sigil">Certificate in Digital Marketing — Lemonoids (Internship)</span></li>
+        <li><span class="sigil">Certificate in CISCO Introduction to Cybersecurity — Cisco</span></li>
+        <li><span class="sigil">Certificate in Basic UI/UX — Great Learning</span></li>
+        <li><span class="sigil">Certificate in Introduction to AI in Python — Coursera</span></li>
+      </ul>
+  <a class="btn primary tech" href="assets/resume.pdf" download>Download Resume<span class="glitch"></span><span class="spark-layer"></span></a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><strong>Location:</strong> Hyderabad, India 500089</p>
+          <p><strong>Phone:</strong> <a class="social-link" href="tel:+918519949342">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.31.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.07 22 2 13.93 2 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.27.2 2.47.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2z"/>
+            </svg>
+            +91 85199 49342
+          </a></p>
+          <p><strong>Email:</strong> <a class="social-link" href="mailto:mohammedaamaaan786@gmail.com">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 6 8-6v10H4z"/>
+            </svg>
+            mohammedaamaaan786@gmail.com
+          </a></p>
+          <p><strong>LinkedIn:</strong> <a class="social-link" href="https://www.linkedin.com/in/mohammed-amaan-52b9b3388?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M20.451 20.451h-3.555v-5.569c0-1.328-.024-3.037-1.852-3.037-1.853 0-2.136 1.447-2.136 2.942v5.664H9.353V9h3.414v1.561h.049c.476-.9 1.64-1.852 3.377-1.852 3.612 0 4.279 2.378 4.279 5.471v6.271zM5.337 7.433a2.064 2.064 0 1 1 0-4.128 2.064 2.064 0 0 1 0 4.128zM7.116 20.451H3.555V9h3.561v11.451zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn Profile
+          </a></p>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+          </div>
+          <button class="btn primary tech" type="submit">Send Message<span class="glitch"></span><span class="spark-layer"></span></button>
+          <p class="form-note">This form is frontend-only. It will not send emails without a backend service.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© <span id="year"></span> Mohammed Amaan. All rights reserved.</p>
+      <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
