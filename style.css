@@ -375,10 +375,65 @@ ul { margin-top: 0; }
   .contact-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
-  .nav-links { position: fixed; inset: 60px 0 auto 0; background: #fff; border-bottom: 1px solid var(--border); padding: 16px; transform: translateY(-120%); transition: transform .2s ease; }
-  .nav-links a { display: block; margin: 10px 0; }
+  .nav-links { position: fixed; inset: 60px 0 auto 0; background: var(--card); border-bottom: 1px solid var(--border); padding: 16px; transform: translateY(-120%); transition: transform .2s ease; z-index: 200; }
+  .nav-links a { display: block; margin: 10px 0; color: var(--text); }
+  .nav-links a:hover { color: var(--accent); text-shadow: none; }
   .hamburger { display: block; }
   .nav-open .nav-links { transform: translateY(0); }
+}
+
+/* Tablet and down */
+@media (max-width: 768px) {
+  .section { padding: 56px 0; }
+  .section h2 { font-size: 28px; }
+  .hero { padding-top: 96px; }
+  .hero-text h1 { font-size: 40px; }
+  .hero-divider { width: 140px; }
+  .tagline { font-size: 15px; }
+  .cta-group { gap: 10px; }
+  .btn { padding: 10px 18px; font-size: 13px; letter-spacing: .8px; }
+
+  .skills-grid { gap: 12px; }
+  .skill-card { padding: 14px; }
+  .skill-card h3 { font-size: 18px; }
+  .skill-card ul { font-size: 15px; }
+
+  .timeline { gap: 12px; }
+  .tl-item { padding: 14px; }
+  .cert-list li { padding: 12px; }
+
+  .contact-grid { gap: 16px; }
+  .contact-form { padding: 16px; }
+  .form-field input, .form-field textarea { font-size: 16px; } /* avoid iOS zoom */
+
+  .footer-flex { flex-direction: column; gap: 10px; text-align: center; }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .section { padding: 44px 0; }
+  .section h2 { font-size: 24px; }
+  .hero { padding-top: 90px; }
+  .hero-text h1 { font-size: 32px; }
+  .hero-divider { width: 120px; height: 5px; }
+  .eyebrow { letter-spacing: 1.4px; font-size: 12px; }
+  .role { font-size: 13px; }
+  .tagline { font-size: 14.5px; }
+  .cta-group { flex-direction: column; width: 100%; }
+  .cta-group .btn { width: 100%; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-card { padding: 12px; }
+  .skill-card h3 { font-size: 17px; }
+  .skill-card ul { font-size: 14.5px; }
+
+  .tl-item { padding: 12px; }
+  .cert-list li { padding: 10px 12px; }
+
+  .contact-form { padding: 14px; }
+  #contact .btn[type="submit"], #contact button[type="submit"] { width: 100%; }
+
+  .to-top { padding: 8px 10px; }
 }
 
 /* Reduced motion: turn off heavy animation cues */
