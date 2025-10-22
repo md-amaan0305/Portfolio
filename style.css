@@ -400,6 +400,7 @@ body.landing-open { overflow: hidden; }
   --accent: #00e5ff; /* neon cyan */
   font-family: 'Rajdhani', sans-serif;
   color: #fff;
+  font-size: 1.08em; /* slightly larger to visually match Cinzel's perceived size */
 }
 /* Ensure glitch layer is visible even in GOT theme */
 .theme-got #theme-landing #chooseValorant .glitch { display: block; }
@@ -550,9 +551,13 @@ body.landing-open { overflow: hidden; }
   .project-cards { gap: 14px; }
   .project-card { padding: 14px; }
   .project-card__actions .btn { padding-inline: 14px; }
+  /* Keep Valorant button readable on tablets despite generic .btn font-size shrink */
+  #theme-landing #chooseValorant { font-size: 15px; }
 }
 @media (max-width: 480px) {
   .project-cards { gap: 12px; }
   .project-card__actions { flex-direction: column; }
   .project-card__actions .btn { width: 100%; }
+  /* Ensure parity on phones as well */
+  #theme-landing #chooseValorant { font-size: 16px; }
 }
