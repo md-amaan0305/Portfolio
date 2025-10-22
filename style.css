@@ -440,6 +440,22 @@ ul { margin-top: 0; }
   #contact .btn[type="submit"], #contact button[type="submit"] { width: 100%; }
 
   .to-top { padding: 8px 10px; }
+
+  /* Add slightly more side padding so full-width buttons don't touch edges */
+  .container { width: min(1100px, 90%); }
+
+  /* Keep Education spine centered and alternate nodes on phones */
+  .edu-branches .spine { left: 50%; transform: translateX(-50%); }
+  .edu-node { width: calc(50% - 24px); margin: 0 0 16px 0; }
+  .edu-node.left { margin-right: auto; padding-right: 28px; text-align: right; }
+  .edu-node.right { margin-left: auto; padding-left: 28px; text-align: left; }
+  .edu-node.left::before { right: -28px; left: auto; width: 22px; }
+  .edu-node.right::before { left: -28px; right: auto; width: 22px; }
+  .edu-node.left::after { right: -34px; left: auto; }
+  .edu-node.right::after { left: -34px; right: auto; }
+
+  /* Contact submit spacing */
+  #contact .contact-form button[type="submit"] { margin-top: 6px; }
 }
 
 /* Reduced motion: turn off heavy animation cues */
