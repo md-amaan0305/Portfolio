@@ -369,6 +369,19 @@ body.landing-open { overflow: hidden; }
 #theme-landing .btn { min-width: 220px; }
 @media (max-width: 480px) { #theme-landing h1 { font-size: 26px; } #theme-landing .btn { width: 100%; } }
 
+/* GOT-styled button on landing, independent of active theme */
+#theme-landing #chooseGOT {
+  /* Override palette locally for this button */
+  --primary: #c29d5b; /* gold */
+  --accent: #a0c7da; /* cold steel */
+  font-family: 'Cinzel', serif;
+  color: var(--primary);
+}
+#theme-landing #chooseGOT .glitch { display: none; }
+#theme-landing #chooseGOT::before { background: linear-gradient(100deg, rgba(194,157,91,1), rgba(194,157,91,0.88)); animation: emberGlow 2.2s ease-in-out infinite; opacity: .28; }
+#theme-landing #chooseGOT:hover::before { opacity: .5; }
+#theme-landing #chooseGOT .spark { background: #c29d5b; box-shadow: 0 0 10px rgba(194,157,91,0.9), 0 0 22px rgba(194,157,91,0.6); }
+
 /* About highlights list */
 .about-highlights { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
 .about-highlights li { position: relative; padding-left: 18px; }
