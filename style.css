@@ -296,6 +296,7 @@ body {
 .timeline { display: grid; gap: 16px; }
 .tl-item { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; box-shadow: var(--shadow); }
 .tl-item h3 { margin-top: 0; }
+.tl-actions { margin-top: 10px; }
 
 /* Education timeline */
 .edu-branches { position: relative; padding: 10px 0; }
