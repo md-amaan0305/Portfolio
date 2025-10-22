@@ -125,7 +125,7 @@
     });
   });
 
-  // Theme toggle: Valorant <-> Game of Thrones
+  // Theme toggle: Neon Mode <-> Legacy Mode
   (function theme() {
     const key = 'site-theme';
     function applyTheme(name) {

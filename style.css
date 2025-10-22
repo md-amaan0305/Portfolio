@@ -6,7 +6,7 @@
 */
 
 :root {
-  /* Valorant-inspired palette */
+  /* Neon Mode palette */
   --bg: #0f1722;          /* deep navy */
   --bg-2: #0b1320;        /* darker */
   --card: #121a26;        /* card panels */
@@ -19,7 +19,7 @@
   --shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-/* Game of Thrones theme overrides */
+/* Legacy Mode overrides */
 .theme-got {
   --bg: #0a0b0d;
   --bg-2: #070809;
@@ -381,7 +381,7 @@ body.landing-open { overflow: hidden; }
 #theme-landing .btn { min-width: 220px; }
 @media (max-width: 480px) { #theme-landing h1 { font-size: 26px; } #theme-landing .btn { width: 100%; } }
 
-/* GOT-styled button on landing, independent of active theme */
+/* Legacy Mode-styled button on landing, independent of active theme */
 #theme-landing #chooseGOT {
   /* Override palette locally for this button */
   --primary: #c29d5b; /* gold */
@@ -394,7 +394,7 @@ body.landing-open { overflow: hidden; }
 #theme-landing #chooseGOT:hover::before { opacity: .5; }
 #theme-landing #chooseGOT .spark { background: #c29d5b; box-shadow: 0 0 10px rgba(194,157,91,0.9), 0 0 22px rgba(194,157,91,0.6); }
 
-/* Valorant-styled button on landing, independent of active theme */
+/* Neon Mode-styled button on landing, independent of active theme */
 #theme-landing #chooseValorant {
   --primary: #ff4655; /* valorant red */
   --accent: #00e5ff; /* neon cyan */
@@ -402,11 +402,11 @@ body.landing-open { overflow: hidden; }
   color: #fff;
   font-size: 1.08em; /* slightly larger to visually match Cinzel's perceived size */
 }
-/* Ensure glitch layer is visible even in GOT theme */
+/* Ensure glitch layer is visible even when Legacy Mode is active */
 .theme-got #theme-landing #chooseValorant .glitch { display: block; }
 #theme-landing #chooseValorant::before { background: linear-gradient(100deg, rgba(255,70,85,1), rgba(255,70,85,0.9)); opacity: .28; animation: none; }
 #theme-landing #chooseValorant:hover::before { opacity: 1; }
-/* Ensure sparks use Valorant cyan even under GOT */
+/* Ensure sparks use Neon cyan even under Legacy Mode */
 .theme-got #theme-landing #chooseValorant .spark, #theme-landing #chooseValorant .spark {
   background: #00e5ff; box-shadow: 0 0 10px rgba(0,229,255,0.9), 0 0 20px rgba(0,229,255,0.5);
 }
