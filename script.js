@@ -153,9 +153,18 @@
     if (!overlay) return;
     const key = 'site-theme';
     const saved = localStorage.getItem(key);
-    function show() { overlay.hidden = false; document.body.classList.add('landing-open'); requestAnimationFrame(()=>overlay.classList.add('in')); }
+    const url = new URL(window.location.href);
+    const force = url.searchParams.get('chooseTheme') === '1' || window.location.hash === '#theme';
+    const shownThisSession = sessionStorage.getItem('landing-shown') === '1';
+    function show() {
+      overlay.hidden = false;
+      document.body.classList.add('landing-open');
+      sessionStorage.setItem('landing-shown', '1');
+      requestAnimationFrame(() => overlay.classList.add('in'));
+    }
     function hide() { overlay.classList.remove('in'); document.body.classList.remove('landing-open'); overlay.hidden = true; }
-    if (!saved) show();
+    // Show overlay if no saved theme, or forced via URL, or once per session even with saved theme
+    if (!saved || force || (!shownThisSession && !!saved)) show();
     const vBtn = document.getElementById('chooseValorant');
     const gBtn = document.getElementById('chooseGOT');
     vBtn && vBtn.addEventListener('click', () => { window.setSiteTheme && window.setSiteTheme('valorant'); hide(); });
