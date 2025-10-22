@@ -137,12 +137,29 @@
       const label = themeToggle && themeToggle.querySelector('.label');
       if (label) label.textContent = (name === 'got') ? 'Game of Thrones Theme' : 'Valorant Theme';
     }
+    // Expose for landing overlay
+    window.setSiteTheme = applyTheme;
     const saved = localStorage.getItem(key);
     if (saved) applyTheme(saved);
     themeToggle && themeToggle.addEventListener('click', () => {
       const active = document.body.classList.contains('theme-got');
       applyTheme(active ? 'valorant' : 'got');
     });
+  })();
+
+  // First-visit theme landing overlay
+  (function landingOverlay() {
+    const overlay = document.getElementById('theme-landing');
+    if (!overlay) return;
+    const key = 'site-theme';
+    const saved = localStorage.getItem(key);
+    function show() { overlay.hidden = false; document.body.classList.add('landing-open'); requestAnimationFrame(()=>overlay.classList.add('in')); }
+    function hide() { overlay.classList.remove('in'); document.body.classList.remove('landing-open'); overlay.hidden = true; }
+    if (!saved) show();
+    const vBtn = document.getElementById('chooseValorant');
+    const gBtn = document.getElementById('chooseGOT');
+    vBtn && vBtn.addEventListener('click', () => { window.setSiteTheme && window.setSiteTheme('valorant'); hide(); });
+    gBtn && gBtn.addEventListener('click', () => { window.setSiteTheme && window.setSiteTheme('got'); hide(); });
   })();
 
   // Background animation: soft particle field
