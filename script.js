@@ -106,27 +106,22 @@
     }
   });
 
-  // Resume download helper: show a friendly message if assets/resume.pdf is missing
+  // Resume download: force download behavior consistently (GitHub Pages compatible)
   const resumeLinks = Array.from(document.querySelectorAll('a[href$="assets/resume.pdf"], a[href$="assets/resume.pdf#"], a[href*="assets/resume.pdf?"]'));
   resumeLinks.forEach(link => {
-    link.addEventListener('click', async (e) => {
-      // Only attempt a check when running on http/https (fetch HEAD is blocked on file://)
-      if (location.protocol === 'http:' || location.protocol === 'https:') {
-        e.preventDefault();
-        const url = link.getAttribute('href');
-        try {
-          const res = await fetch(url, { method: 'HEAD', cache: 'no-store' });
-          if (res.ok) {
-            // Proceed to download/view
-            window.location.href = url;
-          } else {
-            alert('Resume not found. Please upload your PDF as "assets/resume.pdf" or update the link in index.html.');
-          }
-        } catch (err) {
-          alert('Unable to access resume. Ensure the file exists at "assets/resume.pdf" and try again.');
-        }
-      }
-      // On file:// protocol we cannot reliably check; clicking will work if the file exists
+    link.addEventListener('click', (e) => {
+      // Prevent navigation and trigger a download via a temporary anchor
+      e.preventDefault();
+      const href = link.getAttribute('href');
+      const url = href ? new URL(href, location.href).toString() : 'assets/resume.pdf';
+      const a = document.createElement('a');
+      a.href = url;
+      a.setAttribute('download', ''); // let browser use filename
+      a.rel = 'noopener';
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
     });
   });
 
