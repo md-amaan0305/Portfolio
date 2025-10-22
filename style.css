@@ -355,6 +355,12 @@ body {
 /* Utilities */
 ul { margin-top: 0; }
 
+/* About highlights list */
+.about-highlights { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.about-highlights li { position: relative; padding-left: 18px; }
+.about-highlights li::before { content: ""; position: absolute; left: 0; top: 0.9em; transform: translateY(-50%) skewX(-20deg); width: 10px; height: 10px; background: var(--primary); box-shadow: 0 0 8px rgba(255,70,85,0.35); }
+.theme-got .about-highlights li::before { box-shadow: 0 0 8px rgba(194,157,91,0.35); }
+
 /* Scroll reveal states */
 .reveal { opacity: 0; transform: translateY(18px) scale(0.98); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: translateY(0) scale(1); }
