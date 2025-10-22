@@ -360,7 +360,19 @@ ul { margin-top: 0; }
 body.landing-open { overflow: hidden; }
 #theme-landing { position: fixed; inset: 0; z-index: 2000; display: grid; place-items: center; background: rgba(0,0,0,0.6); backdrop-filter: blur(6px) saturate(120%); }
 #theme-landing[hidden] { display: none; }
-#theme-landing .landing-card { width: min(720px, 92%); background: var(--card); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); padding: 28px; text-align: center; position: relative; overflow: hidden; }
+#theme-landing .landing-card {
+  width: min(820px, 95%);
+  /* Fallback solid, then semi-transparent theme-aware background */
+  background: var(--card);
+  background: color-mix(in srgb, var(--card) 82%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  padding: 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 #theme-landing .landing-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
 #theme-landing h1 { margin: 0 0 6px; font-family: 'Rajdhani', sans-serif; letter-spacing: 1px; font-size: 34px; }
 .theme-got #theme-landing h1 { font-family: 'Cinzel', serif; letter-spacing: 1.2px; }
