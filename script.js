@@ -43,26 +43,67 @@
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  // Contact form validation (frontend only)
+  // Contact form: validate + submit via Formspree
   const form = document.getElementById('contactForm');
-  form && form.addEventListener('submit', (e) => {
+  form && form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = document.getElementById('name');
     const email = document.getElementById('email');
     const message = document.getElementById('message');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    let status = form.querySelector('.form-note');
+    if (!status) {
+      status = document.createElement('p');
+      status.className = 'form-note';
+      form.appendChild(status);
+    }
+    // Ensure screen readers announce updates
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
 
-    let errors = [];
+    const errors = [];
     if (!name.value.trim()) errors.push('Name is required');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) errors.push('Valid email is required');
     if (!message.value.trim()) errors.push('Message is required');
-
     if (errors.length) {
-      alert('Please fix the following:\n- ' + errors.join('\n- '));
+      status.textContent = 'Oops! Something went wrong. Please try again.';
+      status.style.color = 'var(--primary)';
       return;
     }
 
-    alert('Thanks, ' + name.value + '! This demo form does not send emails.');
-    form.reset();
+    const endpoint = 'https://formspree.io/f/mrbywbrl';
+    const data = new FormData(form);
+    try {
+      submitBtn && (submitBtn.disabled = true);
+      status.textContent = 'Sending…';
+      status.style.color = 'var(--muted)';
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data,
+      });
+      if (res.ok) {
+        status.textContent = 'Thank you! Your message has been sent.';
+        status.style.color = 'var(--accent)';
+        form.reset();
+      } else {
+        // Try to surface Formspree validation errors
+        let fallback = 'Oops! Something went wrong. Please try again.';
+        try {
+          const json = await res.json();
+          if (json && json.errors && json.errors.length) {
+            fallback = json.errors.map(e => e.message).join(' ');
+          }
+        } catch (_) { /* ignore */ }
+        status.textContent = fallback;
+        status.style.color = 'var(--primary)';
+      }
+    } catch (err) {
+      status.textContent = 'Oops! Something went wrong. Please try again.';
+      status.style.color = 'var(--primary)';
+    } finally {
+      submitBtn && (submitBtn.disabled = false);
+    }
   });
 
   // Resume download helper: show a friendly message if assets/resume.pdf is missing
