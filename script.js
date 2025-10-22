@@ -135,7 +135,7 @@
       document.documentElement.setAttribute('data-theme', name || 'valorant');
       // Update toggle label
       const label = themeToggle && themeToggle.querySelector('.label');
-      if (label) label.textContent = (name === 'got') ? 'Game of Thrones Theme' : 'Valorant Theme';
+  if (label) label.textContent = (name === 'got') ? 'Legacy Mode' : 'Neon Mode';
     }
     // Expose for landing overlay
     window.setSiteTheme = applyTheme;
