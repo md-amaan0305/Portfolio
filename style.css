@@ -107,7 +107,7 @@ body {
   height: 44px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center center; /* keep head centered */
+  object-position: 50% 30%; /* bias toward head/shoulders */
   transform-origin: center center;
   border: 2px solid rgba(255,255,255,0.06);
   box-shadow: 0 6px 18px rgba(0,0,0,0.45);
@@ -120,11 +120,11 @@ body {
 }
 
 /* Slightly zoomed avatar so head appears larger in the circle */
-.logo-img { transform: scale(1.06); }
-.logo-img:hover, .logo-img:focus { transform: scale(1.12); outline: none; }
+.logo-img { transform: scale(1.35); }
+.logo-img:hover, .logo-img:focus { transform: scale(1.42); outline: none; }
 
 /* Modal for profile */
-.modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 2200; padding: 20px; }
+.modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 2200; padding: 20px; min-height: 100dvh; }
 .modal[hidden] { display: none; }
 .modal-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); }
 .modal-card { position: relative; z-index: 2; width: min(720px, 94%); max-width: 720px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04), 0 10px 30px rgba(0,229,255,0.12); padding: 22px; overflow: hidden; }
@@ -133,14 +133,14 @@ body {
 .modal-card:hover::after { transform: translateX(0); }
 .modal-close { position: absolute; right: 12px; top: 10px; border: 0; background: transparent; color: var(--muted); font-size: 22px; cursor: pointer; }
 .modal-body { display: grid; grid-template-columns: 96px 1fr; gap: 16px; align-items: center; }
-.modal-avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; object-position: center center; transform: scale(1.2); border: 3px solid rgba(255,255,255,0.04); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.modal-avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; object-position: 50% 30%; transform: scale(1.35); border: 3px solid rgba(255,255,255,0.04); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 .modal h3 { margin: 0 0 4px; }
 .modal-role { margin: 0 0 8px; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: .8px; }
 .modal-desc { margin: 0 0 8px; color: var(--muted); }
 .modal-meta { list-style: none; padding: 0; margin: 10px 0 0; color: var(--text); }
 .modal-meta li { margin: 4px 0; }
 .modal-meta a { color: var(--accent); text-decoration: none; }
-.modal[aria-hidden="false"] { display: grid; }
+.modal[aria-hidden="false"] { display: flex; }
 
 @media (max-width: 520px) {
   .modal-body { grid-template-columns: 72px 1fr; gap: 12px; }
@@ -154,9 +154,9 @@ body {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Increase header avatar zoom for tighter crop */
-.logo-img { transform: scale(1.22); }
-.logo-img:hover, .logo-img:focus { transform: scale(1.28); }
+/* Increase header avatar zoom for tighter crop (final override) */
+.logo-img { transform: scale(1.45); }
+.logo-img:hover, .logo-img:focus { transform: scale(1.52); }
 .nav-links a {
   margin-left: 18px;
   color: var(--muted);
