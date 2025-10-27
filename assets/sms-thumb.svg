@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff6b6b" />
+      <stop offset="1" stop-color="#00e5ff" />
+    </linearGradient>
+    <style>
+      .bg{fill:#071021}
+      .card{fill:#0e1622;stroke:#22313f;stroke-width:2}
+      .title{font-family:Rajdhani, Arial, sans-serif;font-size:42px;fill:#fff}
+      .subtitle{font-family:Poppins, Arial, sans-serif;font-size:20px;fill:#aab6c6}
+      .badge{fill:url(#g);opacity:0.95}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="720" rx="20"/>
+  <rect class="card" x="60" y="80" width="1080" height="560" rx="12"/>
+  <rect x="84" y="110" width="300" height="36" rx="6" fill="#091722" stroke="#142430" />
+  <rect x="420" y="110" width="600" height="36" rx="6" fill="#091722" stroke="#142430" />
+  <g transform="translate(96,170)">
+    <rect width="320" height="220" rx="10" fill="#071a2a" stroke="#163042" />
+    <rect x="340" width="480" height="220" rx="10" fill="#071a2a" stroke="#163042" />
+    <rect y="240" width="820" height="120" rx="10" fill="#071a2a" stroke="#163042" />
+  </g>
+  <g transform="translate(96,420)">
+    <rect width="320" height="120" rx="8" fill="#071a2a" stroke="#163042" />
+    <rect x="340" width="320" height="120" rx="8" fill="#071a2a" stroke="#163042" />
+  </g>
+  <g transform="translate(92,40)">
+    <rect x="0" y="0" width="220" height="48" rx="8" class="badge" />
+    <text x="110" y="34" text-anchor="middle" class="title">Student Dashboard</text>
+  </g>
+  <text x="120" y="660" class="subtitle">Demo • localStorage • SPA-like navigation</text>
+</svg>

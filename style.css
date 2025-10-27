@@ -298,6 +298,21 @@ body {
 .tl-item h3 { margin-top: 0; }
 .tl-actions { margin-top: 10px; }
 
+/* Project thumbnails inside timeline items */
+.tl-item .project-thumb {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px 0 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+@media (min-width: 900px) {
+  .tl-item .project-thumb { max-width: 420px; }
+}
+
 /* Education timeline */
 .edu-branches { position: relative; padding: 10px 0; }
 .edu-branches .spine { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: rgba(255,255,255,0.08); transform: translateX(-50%); }

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="gg" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff4655"/>
+      <stop offset="1" stop-color="#00e5ff"/>
+    </linearGradient>
+    <style>
+      .bg{fill:#071021}
+      .window{fill:#09121a;stroke:#162532;stroke-width:2}
+      .tab{fill:#0e1622}
+      .title{font-family:Rajdhani, Arial, sans-serif;font-size:44px;fill:#fff}
+      .desc{font-family:Poppins, Arial, sans-serif;font-size:20px;fill:#aab6c6}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="720" rx="20"/>
+  <rect class="window" x="80" y="120" width="1040" height="480" rx="12"/>
+  <g transform="translate(120,160)">
+    <rect class="tab" x="0" y="0" width="220" height="40" rx="6"/>
+    <rect class="tab" x="240" y="0" width="220" height="40" rx="6"/>
+    <rect x="0" y="64" width="880" height="312" rx="8" fill="#06101a" stroke="#123042" />
+    <rect x="16" y="80" width="160" height="24" rx="6" fill="#0b1c26" />
+    <rect x="16" y="120" width="760" height="18" rx="6" fill="#08161f" />
+    <rect x="16" y="156" width="760" height="18" rx="6" fill="#08161f" />
+    <rect x="16" y="192" width="760" height="18" rx="6" fill="#08161f" />
+  </g>
+  <g transform="translate(100,58)">
+    <rect x="0" y="0" width="240" height="56" rx="10" fill="url(#gg)" opacity="0.95"/>
+    <text x="120" y="38" text-anchor="middle" class="title">Pheonix Mini</text>
+  </g>
+  <text x="120" y="680" class="desc">Preview • Electron-style UI • Tabs & Bookmarks</text>
+</svg>
