@@ -34,6 +34,20 @@
       <a href="#home" class="logo">
         <img src="assets/profile.png" alt="Mohammed Amaan" class="logo-img" width="44" height="44" />
       </a>
+      <!-- Profile modal: opened when clicking the header avatar -->
+      <div id="profile-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="profile-title" hidden>
+        <div class="modal-overlay" data-close="true"></div>
+        <div class="modal-card" role="document">
+          <button class="modal-close" aria-label="Close profile">×</button>
+          <div class="modal-body">
+            <img src="assets/profile.png" alt="Mohammed Amaan" class="modal-avatar" />
+            <h3 id="profile-title">Mohammed Amaan</h3>
+            <p class="modal-role">Computer Science Engineering Graduate</p>
+            <p class="modal-desc">Bridging Industrial Automation and Data-driven Solutions — PLC/SCADA, Python, and Digital Strategy. Currently exploring Data Science and Agentic AI.</p>
+            <p class="modal-contact">Hyderabad, India • <a href="mailto:mohammedaamaaan786@gmail.com">mohammedaamaaan786@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
       <nav id="nav" class="nav-links" aria-label="Primary">
         <a href="#home">Home</a>
         <a href="#about">About</a>

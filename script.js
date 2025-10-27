@@ -391,4 +391,34 @@
       });
     });
   })();
+
+  // Profile modal: open when clicking the header avatar
+  (function profileModal() {
+    const avatar = document.querySelector('.logo-img');
+    const modal = document.getElementById('profile-modal');
+    if (!avatar || !modal) return;
+    const overlay = modal.querySelector('.modal-overlay');
+    const closeBtn = modal.querySelector('.modal-close');
+
+    function openModal() {
+      modal.hidden = false;
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('landing-open'); // reuse to prevent scroll
+      // set focus to close button for accessibility
+      closeBtn && closeBtn.focus();
+    }
+    function closeModal() {
+      modal.hidden = true;
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('landing-open');
+      avatar && avatar.focus();
+    }
+
+    avatar.addEventListener('click', openModal);
+    avatar.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); } });
+    overlay && overlay.addEventListener('click', closeModal);
+    closeBtn && closeBtn.addEventListener('click', closeModal);
+    // Close on ESC
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+  })();
 })();
