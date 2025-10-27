@@ -99,6 +99,22 @@ body {
   letter-spacing: 1px;
 }
 .theme-got .logo { font-family: 'Cinzel', serif; letter-spacing: 0.5px; }
+
+/* Profile image used for logo (circular avatar) */
+.logo-img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+.theme-got .logo-img { border-color: rgba(194,157,91,0.28); box-shadow: 0 6px 18px rgba(0,0,0,0.5); }
+
+@media (max-width: 768px) {
+  .logo-img { width: 40px; height: 40px; }
+}
 .nav-links a {
   margin-left: 18px;
   color: var(--muted);
@@ -297,21 +313,6 @@ body {
 .tl-item { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; box-shadow: var(--shadow); }
 .tl-item h3 { margin-top: 0; }
 .tl-actions { margin-top: 10px; }
-
-/* Project thumbnails inside timeline items */
-.tl-item .project-thumb {
-  display: block;
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  border-radius: 10px;
-  margin: 10px 0 12px;
-  border: 1px solid var(--border);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-}
-@media (min-width: 900px) {
-  .tl-item .project-thumb { max-width: 420px; }
-}
 
 /* Education timeline */
 .edu-branches { position: relative; padding: 10px 0; }
