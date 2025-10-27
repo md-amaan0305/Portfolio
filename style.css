@@ -124,23 +124,39 @@ body {
 .logo-img:hover, .logo-img:focus { transform: scale(1.12); outline: none; }
 
 /* Modal for profile */
-.modal { position: fixed; inset: 0; display: grid; place-items: center; z-index: 2200; }
+.modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 2200; padding: 20px; }
 .modal[hidden] { display: none; }
 .modal-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); }
-.modal-card { position: relative; z-index: 2; width: min(720px, 94%); max-width: 720px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,0.6); padding: 22px; }
+.modal-card { position: relative; z-index: 2; width: min(720px, 94%); max-width: 720px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04), 0 10px 30px rgba(0,229,255,0.12); padding: 22px; overflow: hidden; }
+.modal-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
+.modal-card::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.07) 45%, transparent 70%); transform: translateX(-120%); transition: transform .7s ease; mix-blend-mode: screen; }
+.modal-card:hover::after { transform: translateX(0); }
 .modal-close { position: absolute; right: 12px; top: 10px; border: 0; background: transparent; color: var(--muted); font-size: 22px; cursor: pointer; }
 .modal-body { display: grid; grid-template-columns: 96px 1fr; gap: 16px; align-items: center; }
-.modal-avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; object-position: center center; border: 3px solid rgba(255,255,255,0.04); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.modal-avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; object-position: center center; transform: scale(1.2); border: 3px solid rgba(255,255,255,0.04); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 .modal h3 { margin: 0 0 4px; }
 .modal-role { margin: 0 0 8px; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: .8px; }
 .modal-desc { margin: 0 0 8px; color: var(--muted); }
-.modal-contact a { color: var(--accent); text-decoration: none; }
+.modal-meta { list-style: none; padding: 0; margin: 10px 0 0; color: var(--text); }
+.modal-meta li { margin: 4px 0; }
+.modal-meta a { color: var(--accent); text-decoration: none; }
 .modal[aria-hidden="false"] { display: grid; }
 
 @media (max-width: 520px) {
   .modal-body { grid-template-columns: 72px 1fr; gap: 12px; }
   .modal-avatar { width: 72px; height: 72px; }
 }
+
+/* Animate modal card on open */
+.modal-card { opacity: 0; transform: translateY(8px) scale(0.98); }
+.modal:not([hidden]) .modal-card { animation: modalIn .28s ease forwards; }
+@keyframes modalIn {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Increase header avatar zoom for tighter crop */
+.logo-img { transform: scale(1.22); }
+.logo-img:hover, .logo-img:focus { transform: scale(1.28); }
 .nav-links a {
   margin-left: 18px;
   color: var(--muted);
