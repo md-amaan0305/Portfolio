@@ -100,30 +100,26 @@ body {
 }
 .theme-got .logo { font-family: 'Cinzel', serif; letter-spacing: 0.5px; }
 
-/* Profile image used for logo (circular avatar) */
 .logo-img {
   display: block;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: 50% 30%; /* bias toward head/shoulders */
+  object-position: 50% 30%;
   transform-origin: center center;
   border: 2px solid rgba(255,255,255,0.06);
   box-shadow: 0 6px 18px rgba(0,0,0,0.45);
-  transition: transform .25s ease; /* small zoom on load/hover */
+  transition: transform .25s ease;
+  transform: scale(1.45);
 }
+.logo-img:hover, .logo-img:focus { transform: scale(1.52); outline: none; }
 .theme-got .logo-img { border-color: rgba(194,157,91,0.28); box-shadow: 0 6px 18px rgba(0,0,0,0.5); }
 
 @media (max-width: 768px) {
   .logo-img { width: 40px; height: 40px; }
 }
 
-/* Slightly zoomed avatar so head appears larger in the circle */
-.logo-img { transform: scale(1.35); }
-.logo-img:hover, .logo-img:focus { transform: scale(1.42); outline: none; }
-
-/* Modal for profile */
 .modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 2200; padding: 20px; min-height: 100dvh; }
 .modal[hidden] { display: none; }
 .modal-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); }
@@ -147,16 +143,11 @@ body {
   .modal-avatar { width: 72px; height: 72px; }
 }
 
-/* Animate modal card on open */
 .modal-card { opacity: 0; transform: translateY(8px) scale(0.98); }
 .modal:not([hidden]) .modal-card { animation: modalIn .28s ease forwards; }
 @keyframes modalIn {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
-
-/* Increase header avatar zoom for tighter crop (final override) */
-.logo-img { transform: scale(1.45); }
-.logo-img:hover, .logo-img:focus { transform: scale(1.52); }
 .nav-links a {
   margin-left: 18px;
   color: var(--muted);

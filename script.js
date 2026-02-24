@@ -403,8 +403,7 @@
     function openModal() {
       modal.hidden = false;
       modal.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('landing-open'); // reuse to prevent scroll
-      // set focus to close button for accessibility
+      document.body.classList.add('landing-open');
       closeBtn && closeBtn.focus();
     }
     function closeModal() {
@@ -415,10 +414,16 @@
     }
 
     avatar.addEventListener('click', openModal);
-    avatar.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); } });
+    avatar.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal();
+      }
+    });
     overlay && overlay.addEventListener('click', closeModal);
     closeBtn && closeBtn.addEventListener('click', closeModal);
-    // Close on ESC
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.hidden) closeModal();
+    });
   })();
 })();
